@@ -15,14 +15,13 @@ import AdminPanel from "./pages/admin/AdminPanel";
 import AddCategory from "./pages/admin/AddCategory";
 import AddProduct from "./pages/admin/AddProduct";
 import Users from "./pages/admin/Users";
-import Profile from "./pages/user/Profile";
-import Order from "./pages/user/Order";
 import Products from "./pages/admin/Products";
 import SingleProduct from "./pages/admin/SingleProduct";
 import UpdateSingleProd from "./pages/admin/UpdateSingleProd";
 import SearchPage from "./pages/SearchPage";
 import SingleProdUser from "./pages/SingleProdUser";
 import CartPage from "./pages/CartPage";
+import Cancel from "./pages/Cancel";
 function App() {
   return (
     <>
@@ -30,13 +29,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/cancelled" element={<Cancel />} />
         <Route path="/product/:slug" element={<SingleProdUser />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/panel" element={<ProtectedAuth />}>
           <Route path="user" element={<Panel />} />
-          <Route path="user/profile" element={<Profile />} />
-          <Route path="user/orders" element={<Order />} />
         </Route>
         <Route path="/panel" element={<AdminProtected />}>
           <Route path="admin" element={<AdminPanel />} />
