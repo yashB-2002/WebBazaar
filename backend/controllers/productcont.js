@@ -1,6 +1,7 @@
 const slugify = require("slugify");
 const fs = require("fs");
 const Product = require("../models/productModel");
+const stripe = require("stripe")("your stripe publishable key");
 const addProductController = async (req, res) => {
   try {
     const { name, price, slug, description, category, quantity, status } =
@@ -220,6 +221,29 @@ const relatedProductController = async (req, res) => {
     });
   }
 };
+
+const paymentController = async (req, res) => {
+  // console.log(req.body);
+  const { products } = req.body;
+  const lineItems = products.map((product) => ({
+    price_data: {
+      currency: "inr",
+      product_data: {
+        name: product.name,
+      },
+      unit_amount: product.price * 100,
+    },
+    quantity: product.quantity,
+  }));
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ["card"],
+    line_items: lineItems,
+    mode: "payment",
+    success_url: "http://localhost:3000/",
+    cancel_url: "http://localhost:3000/cancelled",
+  });
+  res.json({ id: session.id });
+};
 module.exports = {
   addProductController,
   getProductController,
@@ -230,4 +254,5 @@ module.exports = {
   filterProductController,
   searchProductController,
   relatedProductController,
+  paymentController,
 };
