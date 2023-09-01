@@ -8,6 +8,7 @@ const {
   filterProductController,
   searchProductController,
   relatedProductController,
+  paymentController,
 } = require("../controllers/productcont");
 const { protectingRoutes, isAdmin } = require("../middlewares/authMiddle");
 const formidableMiddleware = require("express-formidable");
@@ -31,5 +32,6 @@ router.put(
 router.post("/product-filter", filterProductController);
 router.get("/search-product/:keyword", searchProductController);
 router.get("/related-product/:pid/:cid", relatedProductController);
+router.post("/checkout", paymentController);
 
 module.exports = router;
