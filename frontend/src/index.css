@@ -342,8 +342,6 @@
   transform: scale(1.05);
 }
 
-/* ProductDisplay.css */
-/* ProductPage.css */
 /* ProductPage.css */
 .product-page {
   padding: 20px;
@@ -354,7 +352,7 @@
 
 .product-container {
   display: flex;
-  flex-direction: column; /* Change to column layout for smaller screens */
+  flex-direction: column;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
@@ -366,8 +364,8 @@
 
 .product-image {
   flex: 1;
-  max-width: 100%; /* Ensure the image takes full width */
-  height: 100px; /* Set a fixed height for the image on small screens */
+  max-width: 100%;
+  height: 100px;
 }
 
 .product-image img {
@@ -399,7 +397,7 @@
 
 .product-info {
   display: flex;
-  flex-direction: column; /* Stack info elements on small screens */
+  flex-direction: column;
   align-items: center;
 }
 
@@ -724,5 +722,181 @@
     border-radius: 5px 0 0 5px;
     margin-bottom: 0;
     margin-right: 10px;
+  }
+}
+
+/* PaymentCancelledPage.css */
+.payment-cancelled-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.payment-cancelled-content {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.payment-cancelled-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.payment-cancelled-message {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.back-to-cart-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-to-cart-button:hover {
+  background-color: #0056b3;
+}
+
+/* UserListPage.css */
+.user-list-page {
+  padding: 20px;
+}
+
+.user-list-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-card {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: calc(33.33% - 20px);
+}
+
+.admin-card {
+  position: relative;
+}
+
+.admin-card::before,
+.admin-card .user-role {
+  font-weight: bolder;
+  font-size: 1.6rem;
+}
+
+.admin-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.user-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  display: inline-block;
+}
+
+.user-info {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+.user-label {
+  font-weight: bold;
+}
+
+.user-role {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* UserProfilePage.css */
+.user-profile {
+  padding: 20px;
+}
+
+.user-card {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  width: 80%;
+  max-width: 500px;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 95%;
+  }
+}
+
+.user-name {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.user-info {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+.user-label {
+  font-weight: bold;
+}
+
+.user-role {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 576px) {
+  .user-name {
+    font-size: 1.3rem;
+  }
+
+  .user-info {
+    font-size: 1.1rem;
+  }
+
+  .user-role {
+    font-size: 1.1rem;
   }
 }
