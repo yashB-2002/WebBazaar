@@ -23,7 +23,7 @@ const AdminMenu = () => {
             to="/panel/admin/users"
             className="list-group-item list-group-item-action"
           >
-            Add new user
+            See all users
           </NavLink>
           <NavLink
             to="/panel/admin/products"
