@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../../components/Layout";
-import UserMenu from "../../components/UserMenu";
 import { useAuth } from "../../context/auth";
 
 const panel = () => {
@@ -8,17 +7,23 @@ const panel = () => {
   const [auth] = useAuth();
   return (
     <Layout title={"User Panel - WebBazaar"}>
-      <div className="container-fluid m-3 p-4 ">
-        <div className="row">
-          <div className="col-md-3">
-            <UserMenu />
-          </div>
-          <div className="col-md-9">
-            <div className="card w-75 p-3 text-center  ">
-              <h4>User Name - {auth.user.name}</h4>
-              <h4>User Email - {auth.user.email}</h4>
-            </div>
-          </div>
+      <div className="user-profile">
+        <h2>User Profile</h2>
+        <div className="user-card">
+          <h3 className="user-name">{auth.user.name}</h3>
+          <p className="user-info">
+            <span className="user-label">Address:</span> {auth.user.address}
+          </p>
+          <p className="user-info">
+            <span className="user-label">Email:</span> {auth.user.email}
+          </p>
+          <p className="user-info">
+            <span className="user-label">Phone:</span> {auth.user.phone}
+          </p>
+          <p className="user-role">
+            <span className="user-label">Role:</span>{" "}
+            {auth.user.role === 1 ? "Admin" : "Normal User"}
+          </p>
         </div>
       </div>
     </Layout>
