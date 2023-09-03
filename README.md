@@ -26,6 +26,19 @@
 
 ### Screenshots -
 
+**Signup Page**
+
+![Screenshot from 2023-09-01 12-34-08](https://github.com/yashB-2002/WebBazaar/assets/86493014/35f5d115-f1ff-4a90-93fc-d1516c7618b8)
+
+**Reset Password Page**
+
+![Screenshot from 2023-09-01 12-34-51](https://github.com/yashB-2002/WebBazaar/assets/86493014/211b6e6a-afa0-4c43-9ed4-1a1ce43e9e98)
+
+**Login Page**
+
+![Screenshot from 2023-09-01 12-35-05](https://github.com/yashB-2002/WebBazaar/assets/86493014/90cad084-41be-40fd-a773-ff0d82a2745c)
+
+
 **Home Page**
 
 ![Screenshot from 2023-08-27 18-52-42](https://github.com/yashB-2002/WebBazaar/assets/86493014/5aab0448-478d-4b1b-b286-7b62725b2547)
@@ -53,5 +66,20 @@
 **Admin Panel(All admin added products)**
 
 ![Screenshot from 2023-08-27 18-53-24](https://github.com/yashB-2002/WebBazaar/assets/86493014/a8471ac2-abf7-4d7f-b03a-5af7f9f4ee8e)
+
+**All registered users on web app**
+
+![Screenshot from 2023-09-01 12-30-00](https://github.com/yashB-2002/WebBazaar/assets/86493014/1cc4c399-6757-4da3-a1d4-2dbdb520c11b)
+
+**Payment Gateway Interface**
+
+![Screenshot from 2023-09-01 12-31-29](https://github.com/yashB-2002/WebBazaar/assets/86493014/8da8cd8f-a7cb-498f-94c0-bf23d0e0c7ff)
+
+**Payment Cancel Page**
+
+![Screenshot from 2023-09-01 12-31-56](https://github.com/yashB-2002/WebBazaar/assets/86493014/a5b464fa-6c28-4148-a500-4fa9ad4a2621)
+
+
+
 
 
